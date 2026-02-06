@@ -1,0 +1,26 @@
+project: Bitcoin_Measurement
+network: mainnet
+iface: eth0
+timeout:
+  connect: 3.0
+  sniff_sync: 2.0
+
+find_reachable:
+  input_csv: data/nodes.csv
+  output_csv: results/reachable.csv
+  default_port: 8333
+  max_workers: 200
+  per_host_timeout: 2.0
+
+ack_probing:
+  target_from_reachable_csv: true
+  pick_policy: first
+  target_ip: ""
+  target_port: 8333
+
+  rounds: 5
+  probes_per_round: 3
+  inter_probe_ms: 50
+  sniff_window_ms: 120
+
+  output_csv: results/ack_results.csv

@@ -1,0 +1,46 @@
+{
+  "common": {
+    "client_ip": "172.16.0.123",
+    "server_ip": "203.0.113.10",
+    "server_port": 8333,
+    "send_if_name": "eth0",
+    "sniff_if_name": [
+      "wlan1mon"
+    ],
+    "client_mac": "aa:bb:cc:dd:ee:ff",
+    "expected_raw_len": 88
+  },
+  "step1_infer_port": {
+    "start_port": 1024,
+    "end_port": 65535,
+    "step_size": 50,
+    "packet_repeat": 1,
+    "repeat_time": 2.0,
+    "expected_raw_len": 88
+  },
+  "step2_infer_seq": {
+    "repeat_num": 4,
+    "expected_raw_len": 88
+  },
+  "step3_infer_ack": {
+    "repeat_num": 1,
+    "expected_raw_len": 88,
+    "sniff_timeout": 0.05,
+    "pre_send_sleep": 0.005,
+    "post_send_wait": 0.05,
+    "keepalive_count": 2,
+    "check_sum": 2,
+    "check_line": 1
+  },
+  "step4_attack_py": {
+    "iface": "eth0",
+    "src_ip": "203.0.113.10",
+    "dst_ip": "172.16.0.123",
+    "src_port": 8333,
+    "dst_port": 0,
+    "inv_type": 1,
+    "timeout": 5.0,
+    "txid_hex": null,
+    "tx_hex": null
+  }
+}

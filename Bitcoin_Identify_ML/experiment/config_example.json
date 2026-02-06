@@ -1,0 +1,38 @@
+{
+  "seed_start": 0,
+  "num_runs": 10,
+  "N_values": [5, 10, 20],
+  "mixing_levels": [0, 1, 2, 3, 4, 5],
+  "bitcoin_users_per_scenario": 1,
+
+  "data_root": "data",
+  "bitcoinsta_class": "bitcoinsta",
+  "train_frac": 0.7,
+
+  "window_duration": 0.2,
+  "step_size": 0.1,
+  "min_frames": 10,
+  "max_windows_train_per_class": 5000,
+  "max_windows_test_per_class": 5000,
+  "max_train_windows_per_class_for_model": 5000,
+
+  "user_agg_num_blocks": 10,
+  "mix_time_jitter_s": 0.02,
+  "bitcoin_packet_fraction_in_block": 0.7,
+  "btc_target_packets_per_block": 400,
+  "min_component_packets": 30,
+
+  "threshold_selection": {
+    "num_val_scenarios_per_setting": 5,
+    "tau_grid_size": 81
+  },
+  "decision_rule": {
+    "type": "topm",
+    "alpha_grid_size": 31,
+    "min_m_pred": 3,
+    "min_m_pred_apply_N_ge": 0
+  },
+
+  "results_dir": "results"
+}
+

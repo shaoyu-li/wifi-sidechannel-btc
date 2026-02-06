@@ -1,0 +1,39 @@
+{
+  "step1": {
+    "client_port": 49152,
+    "confidence": 0.9,
+    "method": "wifi-challenge-ack",
+    "details": {
+      "range": [
+        1024,
+        65535
+      ],
+      "step_size": 50
+    }
+  },
+  "step2": {
+    "seq_next": 287454020,
+    "confidence": 0.95,
+    "method": "wifi-challenge-ack",
+    "details": {
+      "repeat_num": 4
+    }
+  },
+  "step3": {
+    "ack_value": 1432778632,
+    "confidence": 0.95,
+    "method": "wifi-challenge-ack",
+    "details": {
+      "repeat_num": 1,
+      "expected_raw_len": 88,
+      "check_sum": 2
+    }
+  },
+  "inferred": {
+    "client_port": 49152,
+    "seq_next": 287454020,
+    "ack_value": 1432778632
+  },
+  "mode": "inject",
+  "dry_run": false
+}
